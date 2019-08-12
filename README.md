@@ -13,6 +13,16 @@ This is a sample app to practice using `Result` type, stubbing network request f
 
 Run!
 
+## Contents
+
+- [`Result` type in Swift 5](https://github.com/nsoojin/BookStore#result-type-in-swift-5)
+
+- [Stubbing Network Requests for Unit Tests](https://github.com/nsoojin/BookStore#stubbing-network-requests-for-unit-tests)
+
+- [Using Frameworks for independent functionalities](https://github.com/nsoojin/BookStore#using-frameworks-for-independent-functionalities)
+
+- [Writing a documentation comment](https://github.com/nsoojin/BookStore#writing-a-documentation-comment)
+
 ## `Result` type in Swift 5
 
 Out of the box, you have to switch on the `Result` instance to access the underlying success instance or the error instance. 
@@ -72,4 +82,15 @@ session.dataTask(with: urlRequest) { (data, response, error) in
 }.resume()
 ```
 
+## Using Frameworks for independent functionalities
+
+Separating your app's functions into targets has several advantages. It forces you to care about dependencies, and it is good for unit tests since features are sandboxed. However, it may slow down the app launch (by little) due to framework loading.
+
+`BookStoreKit` is responsible for fetching and searching books data from [IT Bookstore API](https://api.itbook.store). 
+
+`Networking` is a wrapper around URLSession for making HTTP requests and parsing response.
+
+<img src="https://raw.githubusercontent.com/nsoojin/BookStore/master/README_assets/xcodeproj-targets.png" width="200">
+
+## Writing a documentation comment
 
