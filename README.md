@@ -19,13 +19,17 @@ Run!
 
 A simple `UITableView` with cells and modal presentation for a detailed page.
 
+<img src="https://raw.githubusercontent.com/nsoojin/BookStore/master/README_assets/whats-new.gif" width="400">
+
 ### Search
 
 1. As a user types in the keyword, the search text is "debounced" for a fraction of second for better performance and user experience. See [Debouncer](https://github.com/nsoojin/BookStore/blob/3a3e91f903e5a77ebdcafd53803fd3edad0dde65/BookStoreKit/Utils/Debouncer.swift#L11).
 
-2. Search results are paginated and provides infinite scroll
+2. Search results are paginated and provides infinite scroll.
 
-## Contents
+<img src="https://raw.githubusercontent.com/nsoojin/BookStore/master/README_assets/search.gif" width="400">
+
+# Contents
 
 - [`Result` type in Swift 5](https://github.com/nsoojin/BookStore#result-type-in-swift-5)
 
