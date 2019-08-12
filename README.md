@@ -94,3 +94,20 @@ Separating your app's functions into targets has several advantages. It forces y
 
 ## Writing a documentation comment
 
+[Swift's API Design Guidelines](https://swift.org/documentation/api-design-guidelines/#fundamentals) suggest you write a documentation comment for every declaration. Writing one can have an impact on the design.
+
+### 1. Write
+
+Reference this [document](https://developer.apple.com/library/archive/documentation/Xcode/Reference/xcode_markup_formatting_ref/index.html) for markup formatting.
+
+<img src="https://raw.githubusercontent.com/nsoojin/BookStore/master/README_assets/documentation-0.png">
+
+### 2. Check out the result
+
+In Xcode's autocompletion
+
+<img src="https://raw.githubusercontent.com/nsoojin/BookStore/master/README_assets/documentation-1.png" width="400">
+
+and Show Quick Help (option + click)
+
+<img src="https://raw.githubusercontent.com/nsoojin/BookStore/master/README_assets/documentation-2.png" width="600">
