@@ -12,7 +12,17 @@ class TabBarController: UITabBarController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        viewControllers?.forEach(setBookStore(on:))
         delegate = self
+    }
+    
+    private func setBookStore(on viewController: UIViewController) {
+        _setBookStore(on: viewController)
+        viewController.children.forEach(_setBookStore(on:))
+    }
+    
+    private func _setBookStore(on viewController: UIViewController) {
+        (viewController as? BookStoreView)?.set(ITBookStoreService())
     }
 }
 

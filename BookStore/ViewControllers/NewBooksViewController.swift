@@ -30,7 +30,7 @@ final class NewBooksViewController: UIViewController {
     
     private func reload() {
         state = .loading
-        BookStore.fetchNewReleases(completionHandler: handle)
+        bookStore.fetchNewReleases(completionHandler: handle)
     }
     
     private func handle(_ result: Result<NewBooksResponse, Error>) {
@@ -48,6 +48,7 @@ final class NewBooksViewController: UIViewController {
         reload()
     }
     
+    lazy var bookStore: BookStoreService = unspecified()
     @IBOutlet private weak var tableView: UITableView!
     @IBOutlet private weak var activityIndicatorView: UIActivityIndicatorView!
     @IBOutlet private weak var statusLabel: UILabel!
@@ -116,7 +117,13 @@ extension NewBooksViewController: UITableViewDataSource {
 extension NewBooksViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let book = books[indexPath.row]
-        let bookInfoViewController = BookInfoViewController.instantiate(isbn13: book.isbn13)
+        let bookInfoViewController = BookInfoViewController.instantiate(isbn13: book.isbn13, bookStore: bookStore)
         present(bookInfoViewController, animated: true, completion: nil)
+    }
+}
+
+extension NewBooksViewController: BookStoreView {
+    func set(_ bookStore: BookStoreService) {
+        self.bookStore = bookStore
     }
 }

@@ -11,6 +11,7 @@ import BookStoreKit
 
 final class SearchViewController: UIViewController {
     private(set) var books = [Book]()
+    lazy var bookStore: BookStoreService = unspecified()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -66,7 +67,9 @@ final class SearchViewController: UIViewController {
         errorMessageView.animateFadeIn()
     }
     
-    private let searchEngine = SearchEngine()
+    private var searchEngine: SearchEngine {
+        return bookStore.searchEngine
+    }
     
     @IBOutlet private weak var searchBar: UISearchBar!
     @IBOutlet private weak var tableView: UITableView!
@@ -151,7 +154,7 @@ extension SearchViewController: UITableViewDataSource {
 extension SearchViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let book = books[indexPath.row]
-        let bookInfoViewController = BookInfoViewController.instantiate(isbn13: book.isbn13)
+        let bookInfoViewController = BookInfoViewController.instantiate(isbn13: book.isbn13, bookStore: bookStore)
         present(bookInfoViewController, animated: true, completion: nil)
     }
     
@@ -168,5 +171,11 @@ extension SearchViewController: UITableViewDataSourcePrefetching {
     func tableView(_ tableView: UITableView, prefetchRowsAt indexPaths: [IndexPath]) {
         let thumbnailURLs = indexPaths.compactMap { books[$0.row].thumbnailURL }
         thumbnailURLs.forEach { ImageProvider.shared.fetch(from: $0) }
+    }
+}
+
+extension SearchViewController: BookStoreView {
+    func set(_ bookStore: BookStoreService) {
+        self.bookStore = bookStore
     }
 }

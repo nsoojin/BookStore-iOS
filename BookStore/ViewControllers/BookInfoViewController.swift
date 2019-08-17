@@ -10,8 +10,9 @@ import UIKit
 import BookStoreKit
 
 final class BookInfoViewController: UIViewController {
-    static func instantiate(isbn13: String) -> BookInfoViewController {
+    static func instantiate(isbn13: String, bookStore: BookStoreService) -> BookInfoViewController {
         let vc = UIStoryboard.main.instantiateViewController(BookInfoViewController.self)
+        vc.bookStore = bookStore
         vc.isbn13 = isbn13
         return vc
     }
@@ -27,7 +28,7 @@ final class BookInfoViewController: UIViewController {
     
     private func refreshInfo() {
         activityIndicator.startAnimating()
-        BookStore.fetchInfo(with: isbn13) { [weak self] (result) in
+        bookStore.fetchInfo(with: isbn13) { [weak self] (result) in
             guard let self = self else { return }
             
             self.activityIndicator.stopAnimating()
@@ -94,6 +95,7 @@ final class BookInfoViewController: UIViewController {
         }
     }
     
+    private(set) lazy var bookStore: BookStoreService = unspecified()
     @IBOutlet private weak var contentStackView: UIStackView!
     @IBOutlet private weak var activityIndicator: UIActivityIndicatorView!
     @IBOutlet private weak var titleLabel: UILabel!
