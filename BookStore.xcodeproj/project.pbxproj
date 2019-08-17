@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F529C1A023084C7200529833 /* SearchErrorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F529C19F23084C7200529833 /* SearchErrorTests.swift */; };
 		F531D83D22AE62B300156E2E /* NewBooksViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F531D83C22AE62B300156E2E /* NewBooksViewController.swift */; };
 		F531D84522AE6A4100156E2E /* BookCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F531D84322AE6A4100156E2E /* BookCell.swift */; };
 		F531D84622AE6A4100156E2E /* BookCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F531D84422AE6A4100156E2E /* BookCell.xib */; };
@@ -129,6 +130,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		F529C19F23084C7200529833 /* SearchErrorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchErrorTests.swift; sourceTree = "<group>"; };
 		F531D82F22AE510900156E2E /* APIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIClient.swift; sourceTree = "<group>"; };
 		F531D83122AE519700156E2E /* API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
 		F531D83522AE5CD900156E2E /* APIError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIError.swift; sourceTree = "<group>"; };
@@ -362,6 +364,7 @@
 			children = (
 				F5C1A2C822B60F0900E9D6CD /* MockAPI */,
 				F5C1A2CD22B61FAF00E9D6CD /* SearchEngineTests.swift */,
+				F529C19F23084C7200529833 /* SearchErrorTests.swift */,
 				F5C1A2C622B60E2800E9D6CD /* APITests.swift */,
 				F5C1A2C222B5B87C00E9D6CD /* UtilsTests.swift */,
 				F56ACD4A22BD24C200317A84 /* Info.plist */,
@@ -713,6 +716,7 @@
 				F56ACD6B22BD257000317A84 /* MockSearchResultsProvider.swift in Sources */,
 				F56ACD6D22BD257300317A84 /* APITests.swift in Sources */,
 				F56ACD6E22BD257300317A84 /* UtilsTests.swift in Sources */,
+				F529C1A023084C7200529833 /* SearchErrorTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

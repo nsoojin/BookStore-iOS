@@ -56,6 +56,7 @@ class SearchEngineTests: XCTestCase {
         didReceiveResultTest = { result in
             if case let .failure(error) = result {
                 XCTAssertEqual(error, .notFound)
+                XCTAssertEqual(error.errorDescription, "Your search did not have any results.")
             } else {
                 XCTFail("SearchEngine should be notFound")
             }
@@ -107,6 +108,7 @@ class SearchEngineTests: XCTestCase {
         didReceiveResultTest = { result in
             if case let .failure(error) = result {
                 XCTAssertEqual(error, .endOfResult)
+                XCTAssertEqual(error.errorDescription, "This is the end of the result.")
             } else {
                 XCTFail("Search Result should be endOfResult")
             }
@@ -115,6 +117,31 @@ class SearchEngineTests: XCTestCase {
         }
         
         searchEngine.requestNextPage()
+        
+        waitForExpectations(timeout: 0.5, handler: nil)
+    }
+    
+    func testApiFailure() {
+        didStartTest = { request in
+            XCTAssertEqual(request.text, "0000")
+            XCTAssertEqual(request.page, 1)
+        }
+        
+        didReceiveResultTest = { result in
+            if case let .failure(apiError) = result {
+                if case let .apiFailure(error as NSError) = apiError {
+                    XCTAssertEqual(error.domain, "SearchError")
+                    XCTAssertEqual(error.code, 1111)
+                    XCTAssertTrue(error.userInfo.isEmpty)
+                } else {
+                    XCTFail("Search Result should be API Failure")
+                }
+            } else {
+                XCTFail("Search Result should be failure")
+            }
+        }
+        
+        searchEngine.search(for: "0000")
         
         waitForExpectations(timeout: 0.5, handler: nil)
     }

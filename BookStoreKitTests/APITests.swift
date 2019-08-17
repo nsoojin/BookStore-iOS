@@ -66,6 +66,7 @@ class APITests: XCTestCase {
                 XCTAssertEqual(bookInfo.price, "$44.99")
                 XCTAssertEqual(bookInfo.thumbnailURL, URL(string: "https://itbook.store/img/books/9781788476249.png"))
                 XCTAssertEqual(bookInfo.purchaseURL, URL(string: "https://itbook.store/books/9781788476249"))
+                XCTAssertEqual("\(bookInfo)", "<BookInfo-Learning C++ by Building Games with Unreal Engine 4, 2nd Edition>")
                 apiExpectation.fulfill()
             case .failure:
                 ()
