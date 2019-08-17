@@ -4,3 +4,5 @@ osx_image: xcode10.2
 xcode_project: BookStore.xcodeproj
 xcode_scheme: BookStore
 xcode_destination: platform=iOS Simulator,OS=12.2,name=iPhone XR
+after_success:
+  - bash <(curl -s https://codecov.io/bash) -t {36c7dd36-a065-4dd9-9de6-a04759786490}
