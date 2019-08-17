@@ -1,3 +1,5 @@
 language:
   - swift
 osx_image: xcode10.2
+xcode_project: BookStore.xcodeproj
+xcode_scheme: BookStore
