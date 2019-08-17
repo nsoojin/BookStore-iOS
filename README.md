@@ -1,5 +1,14 @@
 # BookStore
 
+<p align="left">
+    <a href="https://github.com/nsoojin/BookStore/blob/master/LICENSE" alt="License">
+        <img src="https://img.shields.io/github/license/nsoojin/BookStore"/></a>
+    <a href="https://github.com/nsoojin/BookStore/pulls">
+        <img src="https://img.shields.io/badge/PRs-welcome-brightgreen"></a>
+    <a href="https://twitter.com/intent/follow?screen_name=soojinro">
+        <img src="https://img.shields.io/twitter/follow/soojinro?style=social"></a>
+</p>
+
 See new releases and search for programming books from [IT Bookstore API](https://api.itbook.store)
 
 This is a sample app to practice using `Result` type, stubbing network request for unit tests, separating functionalities into frameworks, and writing Swift documentation.
