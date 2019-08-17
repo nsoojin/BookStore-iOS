@@ -3,6 +3,8 @@
 <p align="left">
     <a href="https://travis-ci.org/nsoojin/BookStore" alt="Build">
         <img src="https://img.shields.io/travis/nsoojin/BookStore/master"/></a>
+    <a href="https://codecov.io/gh/nsoojin/BookStore">
+      <img src="https://codecov.io/gh/nsoojin/BookStore/branch/master/graph/badge.svg" /></a>
     <a href="https://github.com/nsoojin/BookStore/blob/master/LICENSE" alt="License">
         <img src="https://img.shields.io/github/license/nsoojin/BookStore"/></a>
     <a href="https://github.com/nsoojin/BookStore/pulls">
