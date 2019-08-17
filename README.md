@@ -13,6 +13,20 @@ This is a sample app to practice using `Result` type, stubbing network request f
 
 Run!
 
+# Contents
+
+- [App Features](https://github.com/nsoojin/BookStore#app-features)
+
+- [`Result` type in Swift 5](https://github.com/nsoojin/BookStore#result-type-in-swift-5)
+
+- [Stubbing Network Requests for Unit Tests](https://github.com/nsoojin/BookStore#stubbing-network-requests-for-unit-tests)
+
+- [Using Frameworks for independent functionalities](https://github.com/nsoojin/BookStore#using-frameworks-for-independent-functionalities)
+
+- [Writing a documentation comment](https://github.com/nsoojin/BookStore#writing-a-documentation-comment)
+
+- [Getting Rid of IUOs](https://github.com/nsoojin/BookStore#getting-rid-of-iuos)
+
 ## App Features
 
 ### What's New
@@ -28,16 +42,6 @@ A simple `UITableView` with cells and modal presentation for a detailed page.
 2. Search results are paginated and provides infinite scroll.
 
 <img src="https://raw.githubusercontent.com/nsoojin/BookStore/master/README_assets/search.gif" width="400">
-
-# Contents
-
-- [`Result` type in Swift 5](https://github.com/nsoojin/BookStore#result-type-in-swift-5)
-
-- [Stubbing Network Requests for Unit Tests](https://github.com/nsoojin/BookStore#stubbing-network-requests-for-unit-tests)
-
-- [Using Frameworks for independent functionalities](https://github.com/nsoojin/BookStore#using-frameworks-for-independent-functionalities)
-
-- [Writing a documentation comment](https://github.com/nsoojin/BookStore#writing-a-documentation-comment)
 
 ## `Result` type in Swift 5
 
@@ -127,3 +131,20 @@ In Xcode's autocompletion
 and Show Quick Help (option + click)
 
 <img src="https://raw.githubusercontent.com/nsoojin/BookStore/master/README_assets/documentation-2.png" width="600">
+
+## Getting Rid of IUOs
+
+IMHO Implictly unwrapped optional is a potential threat to code safety and should be avoided as much as possible if not altogether. 
+
+### Make IBOutlets Optional
+
+IBOutlets are IUOs by Apple's default. However, you can change that to Optional types. You may worry that making IBOutlets Optionals may cause too many if lets or guards, but that concern may just be overrated. IBOutlets are mostly used to set values on them, so optional chaining is sufficient. In just few cases where unwrapping is added, I will embrace them for additional safety of my code.
+
+### Using lazy instantiation
+
+For the properties of UIViewController subclass, IUO can be useful but it's still dangerous. Instead, I use `[unspecified](https://github.com/nsoojin/BookStore/blob/e27ea7252189e9f7ed2b7a9494334ccab9ce801c/BookStore/Extensions/Unspecified.swift#L11)`. It generates a crash upon class/struct usage so it can be spotted fast during development, and most importantly no more IUOs.
+
+```swift
+//Inside a viewcontroller
+lazy var bookStore: BookStoreService = unspecified()
+```
