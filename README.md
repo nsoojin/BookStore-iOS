@@ -140,9 +140,11 @@ IMHO Implictly unwrapped optional is a potential threat to code safety and shoul
 
 IBOutlets are IUOs by Apple's default. However, you can change that to Optional types. You may worry that making IBOutlets Optionals may cause too many if lets or guards, but that concern may just be overrated. IBOutlets are mostly used to set values on them, so optional chaining is sufficient. In just few cases where unwrapping is added, I will embrace them for additional safety of my code.
 
+<img src="https://raw.githubusercontent.com/nsoojin/BookStore/master/README_assets/optional-iboutlets.png" width="500">
+
 ### Using lazy instantiation
 
-For the properties of UIViewController subclass, IUO can be useful but it's still dangerous. Instead, I use `[unspecified](https://github.com/nsoojin/BookStore/blob/e27ea7252189e9f7ed2b7a9494334ccab9ce801c/BookStore/Extensions/Unspecified.swift#L11)`. It generates a crash upon class/struct usage so it can be spotted fast during development, and most importantly no more IUOs.
+For the properties of UIViewController subclass, IUO can be useful but it's still dangerous. Instead, I use [`unspecified`](https://github.com/nsoojin/BookStore/blob/e27ea7252189e9f7ed2b7a9494334ccab9ce801c/BookStore/Extensions/Unspecified.swift#L11). It generates a crash upon class/struct usage so it can be spotted fast during development, and most importantly no more IUOs.
 
 ```swift
 //Inside a viewcontroller
