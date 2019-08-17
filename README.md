@@ -1,5 +1,7 @@
 # BookStore
 
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/64a476c06de54ba3be164e14dacf7c30)](https://app.codacy.com/app/nsoojin/BookStore?utm_source=github.com&utm_medium=referral&utm_content=nsoojin/BookStore&utm_campaign=Badge_Grade_Settings)
+
 <p align="left">
     <a href="https://travis-ci.org/nsoojin/BookStore" alt="Build">
         <img src="https://img.shields.io/travis/nsoojin/BookStore/master"/></a>
