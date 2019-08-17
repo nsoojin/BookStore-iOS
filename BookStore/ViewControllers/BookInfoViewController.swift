@@ -11,10 +11,10 @@ import BookStoreKit
 
 final class BookInfoViewController: UIViewController {
     static func instantiate(isbn13: String, bookStore: BookStoreService) -> BookInfoViewController {
-        let vc = UIStoryboard.main.instantiateViewController(BookInfoViewController.self)
-        vc.bookStore = bookStore
-        vc.isbn13 = isbn13
-        return vc
+        let bookInfo = UIStoryboard.main.instantiateViewController(BookInfoViewController.self)
+        bookInfo.bookStore = bookStore
+        bookInfo.isbn13 = isbn13
+        return bookInfo
     }
     
     private(set) lazy var isbn13: String = unspecified()

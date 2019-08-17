@@ -57,7 +57,7 @@ class SearchEngineTests: XCTestCase {
             if case let .failure(error) = result {
                 XCTAssertEqual(error, .notFound)
             } else {
-                XCTFail()
+                XCTFail("SearchEngine should be notFound")
             }
         }
         
@@ -66,7 +66,6 @@ class SearchEngineTests: XCTestCase {
         waitForExpectations(timeout: 0.5, handler: nil)
     }
     
-
     func testResult() {
         didStartTest = { request in
             XCTAssertEqual(request.text, "dummies")
@@ -80,7 +79,7 @@ class SearchEngineTests: XCTestCase {
                 XCTAssertEqual(response.books.count, 10)
                 XCTAssertTrue(self.searchEngine.hasNextPage)
             } else {
-                XCTFail()
+                XCTFail("Search Result should be success")
             }
         }
         
@@ -109,7 +108,7 @@ class SearchEngineTests: XCTestCase {
             if case let .failure(error) = result {
                 XCTAssertEqual(error, .endOfResult)
             } else {
-                XCTFail()
+                XCTFail("Search Result should be endOfResult")
             }
             
             XCTAssertFalse(self.searchEngine.hasNextPage)

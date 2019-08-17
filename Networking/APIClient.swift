@@ -12,7 +12,7 @@ public struct APIClient {
     public static let shared = APIClient(session: URLSession.shared)
     
     public func requestData(with urlRequest: URLRequest, completionHandler: @escaping (Result<Data, Error>) -> Void) {
-        session.dataTask(with: urlRequest) { (data, response, error) in
+        session.dataTask(with: urlRequest) { (data, _, error) in
             guard let data = data else {
                 DispatchQueue.main.async {
                     completionHandler(.failure(error ?? APIError.unknown))
@@ -27,7 +27,7 @@ public struct APIClient {
     }
     
     public func requestData(with url: URL, completionHandler: @escaping (Result<Data, Error>) -> Void) {
-        session.dataTask(with: url) { (data, response, error) in
+        session.dataTask(with: url) { (data, _, error) in
             guard let data = data else {
                 DispatchQueue.main.async {
                     completionHandler(.failure(error ?? APIError.unknown))

@@ -33,7 +33,7 @@ class APITests: XCTestCase {
                 XCTAssertEqual(book.subtitle, "A beginner's guide to learning 3D game development with C++ and UE4")
                 XCTAssertEqual(book.isbn13, "9781788476249")
                 XCTAssertEqual(book.price, "$44.99")
-                XCTAssertEqual(book.thumbnailURL, URL(string:"https://itbook.store/img/books/9781788476249.png"))
+                XCTAssertEqual(book.thumbnailURL, URL(string: "https://itbook.store/img/books/9781788476249.png"))
                 XCTAssertEqual(book.purchaseURL, URL(string: "https://itbook.store/books/9781788476249"))
                 XCTAssertEqual("\(book)", "<Book-Learning C++ by Building Games with Unreal Engine 4, 2nd Edition>")
                 apiExpectation.fulfill()

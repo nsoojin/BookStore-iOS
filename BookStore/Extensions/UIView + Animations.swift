@@ -14,32 +14,32 @@ extension UIView {
     func animateFadeIn(completion: (() -> Void)? = nil) {
         UIView.animate(withDuration: durationFadeAnimation, delay: 0, options: [.beginFromCurrentState], animations: {
             self.alpha = 1
-        }) { _ in
+        }, completion: { _ in
             completion?()
-        }
+        })
     }
-    
+
     func animateFadeOut(completion: (() -> Void)? = nil) {
         UIView.animate(withDuration: durationFadeAnimation, delay: 0, options: [.beginFromCurrentState], animations: {
             self.alpha = 0
-        }) { _ in
+        }, completion: { _ in
             completion?()
-        }
+        })
     }
-    
+
     static func animateFadeOut(_ views: [UIView?], completion: (() -> Void)? = nil) {
         UIView.animate(withDuration: durationFadeAnimation, animations: {
             views.forEach { $0?.alpha = 0 }
-        }) { _ in
+        }, completion: { _ in
             completion?()
-        }
+        })
     }
-    
+
     static func animateFadeIn(_ views: [UIView?], completion: (() -> Void)? = nil) {
         UIView.animate(withDuration: durationFadeAnimation, animations: {
             views.forEach { $0?.alpha = 0 }
-        }) { _ in
+        }, completion: { _ in
             completion?()
-        }
+        })
     }
 }

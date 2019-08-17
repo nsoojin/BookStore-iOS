@@ -21,7 +21,6 @@ struct MockData {
                                 {"error":"0","total":"0","page":"1","books":[]}
                                 """.data(using: .utf8)!
     
-    
     static let searchEndOfResult = """
                                     {"error":"0","total":"0","page":"2","books":[]}
                                     """.data(using: .utf8)!

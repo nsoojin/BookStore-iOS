@@ -45,7 +45,7 @@ class UtilsTests: XCTestCase {
         case .success(let value):
             XCTAssertEqual(value, "Hello World")
         case .failure:
-            XCTFail()
+            XCTFail("Result MapThrow should succeed")
         }
     }
     
@@ -60,7 +60,7 @@ class UtilsTests: XCTestCase {
         
         switch result {
         case .success:
-            XCTFail()
+            XCTFail("Result MapThrow should fail")
         case .failure(let error):
             XCTAssertTrue((error as? SampleError) == .sample)
         }

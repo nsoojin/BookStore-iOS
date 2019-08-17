@@ -12,11 +12,11 @@ extension UIStoryboard {
     static let main = UIStoryboard(name: "Main", bundle: nil)
     
     func instantiateViewController<T: UIViewController>(_ viewControllerType: T.Type) -> T {
-        guard let vc = instantiateViewController(withIdentifier: String(describing: viewControllerType.self)) as? T else {
+        guard let viewController = instantiateViewController(withIdentifier: String(describing: viewControllerType.self)) as? T else {
             fatalError("Unexpected view controller type for \(String(describing: viewControllerType.self))")
         }
         
-        return vc
+        return viewController
     }
 }
 

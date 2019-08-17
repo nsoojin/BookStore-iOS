@@ -19,9 +19,9 @@ public struct APIConfiguration {
     public let parameters: [String: Any]?
     
     public init(method: HTTPMethod = .get,
-         base: URL,
-         path: String,
-         parameters: [String: Any]? = nil) {
+                base: URL,
+                path: String,
+                parameters: [String: Any]? = nil) {
         self.method = method
         self.url = base.appendingPathComponent(path)
         self.parameters = parameters
