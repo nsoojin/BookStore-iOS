@@ -134,7 +134,7 @@ and Show Quick Help (option + click)
 
 ## Getting Rid of IUOs
 
-IMHO Implictly unwrapped optional is a potential threat to code safety and should be avoided as much as possible if not altogether. 
+IMHO Implictly unwrapped optional is a potential threat to code safety and should be avoided as much as possible if not altogether. An example of two methods to get rid of them from where they are commonly used.
 
 ### Make IBOutlets Optional
 
