@@ -27,11 +27,11 @@ final class BookInfoViewController: UIViewController {
     }
     
     private func refreshInfo() {
-        activityIndicator.startAnimating()
+        activityIndicator?.startAnimating()
         bookStore.fetchInfo(with: isbn13) { [weak self] (result) in
             guard let self = self else { return }
             
-            self.activityIndicator.stopAnimating()
+            self.activityIndicator?.stopAnimating()
             result.success { self.bookInfo = $0 }
                   .catch(self.handle)
         }
@@ -49,34 +49,34 @@ final class BookInfoViewController: UIViewController {
     }
     
     private func setupViews() {
-        contentStackView.isHidden = true
-        buyButton.layer.cornerRadius = 8
-        buyButton.layer.masksToBounds = true
+        contentStackView?.isHidden = true
+        buyButton?.layer.cornerRadius = 8
+        buyButton?.layer.masksToBounds = true
     }
     
     private func layoutInfo() {
         guard let info = bookInfo else { return }
         
-        titleLabel.text = info.title
-        subtitleLabel.text = info.subtitle
-        authorsLabel.text = info.authors
-        priceLabel.text = info.price
-        descriptionLabel.text = info.shortDescription
-        publisherLabel.text = info.publisher
-        yearLabel.text = info.year
-        languageLabel.text = info.language
-        lengthLabel.text = info.pages
-        isbn10Label.text = info.isbn10
-        isbn13Label.text = info.isbn13
-        ratingLabel.text = info.rating
+        titleLabel?.text = info.title
+        subtitleLabel?.text = info.subtitle
+        authorsLabel?.text = info.authors
+        priceLabel?.text = info.price
+        descriptionLabel?.text = info.shortDescription
+        publisherLabel?.text = info.publisher
+        yearLabel?.text = info.year
+        languageLabel?.text = info.language
+        lengthLabel?.text = info.pages
+        isbn10Label?.text = info.isbn10
+        isbn13Label?.text = info.isbn13
+        ratingLabel?.text = info.rating
         
         if let thumbnailURL = info.thumbnailURL {
             ImageProvider.shared.fetch(from: thumbnailURL) { [weak self] (result) in
-                self?.thumbnailImageView.image = try? result.get()
+                self?.thumbnailImageView?.image = try? result.get()
             }
         }
         
-        contentStackView.isHidden = false
+        contentStackView?.isHidden = false
     }
     
     @IBAction private func buyButtonTapped(_ sender: UIButton) {
@@ -96,20 +96,20 @@ final class BookInfoViewController: UIViewController {
     }
     
     private(set) lazy var bookStore: BookStoreService = unspecified()
-    @IBOutlet private weak var contentStackView: UIStackView!
-    @IBOutlet private weak var activityIndicator: UIActivityIndicatorView!
-    @IBOutlet private weak var titleLabel: UILabel!
-    @IBOutlet private weak var subtitleLabel: UILabel!
-    @IBOutlet private weak var authorsLabel: UILabel!
-    @IBOutlet private weak var thumbnailImageView: UIImageView!
-    @IBOutlet private weak var priceLabel: UILabel!
-    @IBOutlet private weak var buyButton: UIButton!
-    @IBOutlet private weak var descriptionLabel: UILabel!
-    @IBOutlet private weak var publisherLabel: UILabel!
-    @IBOutlet private weak var yearLabel: UILabel!
-    @IBOutlet private weak var languageLabel: UILabel!
-    @IBOutlet private weak var lengthLabel: UILabel!
-    @IBOutlet private weak var isbn10Label: UILabel!
-    @IBOutlet private weak var isbn13Label: UILabel!
-    @IBOutlet private weak var ratingLabel: UILabel!
+    @IBOutlet private weak var contentStackView: UIStackView?
+    @IBOutlet private weak var activityIndicator: UIActivityIndicatorView?
+    @IBOutlet private weak var titleLabel: UILabel?
+    @IBOutlet private weak var subtitleLabel: UILabel?
+    @IBOutlet private weak var authorsLabel: UILabel?
+    @IBOutlet private weak var thumbnailImageView: UIImageView?
+    @IBOutlet private weak var priceLabel: UILabel?
+    @IBOutlet private weak var buyButton: UIButton?
+    @IBOutlet private weak var descriptionLabel: UILabel?
+    @IBOutlet private weak var publisherLabel: UILabel?
+    @IBOutlet private weak var yearLabel: UILabel?
+    @IBOutlet private weak var languageLabel: UILabel?
+    @IBOutlet private weak var lengthLabel: UILabel?
+    @IBOutlet private weak var isbn10Label: UILabel?
+    @IBOutlet private weak var isbn13Label: UILabel?
+    @IBOutlet private weak var ratingLabel: UILabel?
 }

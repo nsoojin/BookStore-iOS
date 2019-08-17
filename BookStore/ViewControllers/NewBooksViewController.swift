@@ -20,12 +20,12 @@ final class NewBooksViewController: UIViewController {
     }
     
     private func setupTableView() {
-        tableView.register(BookCell.self)
-        tableView.delegate = self
-        tableView.dataSource = self
-        tableView.rowHeight = 250
-        tableView.estimatedRowHeight = 250
-        tableView.tableFooterView = UIView()
+        tableView?.register(BookCell.self)
+        tableView?.delegate = self
+        tableView?.dataSource = self
+        tableView?.rowHeight = 250
+        tableView?.estimatedRowHeight = 250
+        tableView?.tableFooterView = UIView()
     }
     
     private func reload() {
@@ -38,7 +38,7 @@ final class NewBooksViewController: UIViewController {
         case .success(let response):
             books = response.books
             state = books.isEmpty ? .empty : .finished
-            tableView.reloadData()
+            tableView?.reloadData()
         case .failure:
             state = .error
         }
@@ -49,10 +49,10 @@ final class NewBooksViewController: UIViewController {
     }
     
     lazy var bookStore: BookStoreService = unspecified()
-    @IBOutlet private weak var tableView: UITableView!
-    @IBOutlet private weak var activityIndicatorView: UIActivityIndicatorView!
-    @IBOutlet private weak var statusLabel: UILabel!
-    @IBOutlet private weak var retryButton: UIButton!
+    @IBOutlet private weak var tableView: UITableView?
+    @IBOutlet private weak var activityIndicatorView: UIActivityIndicatorView?
+    @IBOutlet private weak var statusLabel: UILabel?
+    @IBOutlet private weak var retryButton: UIButton?
     
     private enum LoadingState {
         case loading, finished, empty, error
@@ -62,25 +62,25 @@ final class NewBooksViewController: UIViewController {
         didSet {
             switch state {
             case .loading:
-                tableView.isHidden = true
-                statusLabel.text = "Loading"
-                retryButton.isHidden = true
-                activityIndicatorView.startAnimating()
+                tableView?.isHidden = true
+                statusLabel?.text = "Loading"
+                retryButton?.isHidden = true
+                activityIndicatorView?.startAnimating()
             case .finished:
-                tableView.isHidden = false
-                statusLabel.text = nil
-                retryButton.isHidden = true
-                activityIndicatorView.stopAnimating()
+                tableView?.isHidden = false
+                statusLabel?.text = nil
+                retryButton?.isHidden = true
+                activityIndicatorView?.stopAnimating()
             case .empty:
-                tableView.isHidden = true
-                statusLabel.text = "Nothing new 🙃"
-                retryButton.isHidden = true
-                activityIndicatorView.stopAnimating()
+                tableView?.isHidden = true
+                statusLabel?.text = "Nothing new 🙃"
+                retryButton?.isHidden = true
+                activityIndicatorView?.stopAnimating()
             case .error:
-                tableView.isHidden = true
-                statusLabel.text = "Something went wrong 🤯"
-                retryButton.isHidden = false
-                activityIndicatorView.stopAnimating()
+                tableView?.isHidden = true
+                statusLabel?.text = "Something went wrong 🤯"
+                retryButton?.isHidden = false
+                activityIndicatorView?.stopAnimating()
             }
         }
     }
@@ -97,15 +97,15 @@ extension NewBooksViewController: UITableViewDataSource {
         let book = books[indexPath.row]
         
         cell.identifier = book.isbn13
-        cell.titleLabel.text = book.title
-        cell.subtitleLabel.text = book.subtitle
-        cell.priceLabel.text = book.price
-        cell.isbn13Label.text = book.isbn13
+        cell.titleLabel?.text = book.title
+        cell.subtitleLabel?.text = book.subtitle
+        cell.priceLabel?.text = book.price
+        cell.isbn13Label?.text = book.isbn13
         
         if let thumbnailURL = book.thumbnailURL {
             ImageProvider.shared.fetch(from: thumbnailURL) { (result) in
                 if case .success(let image) = result, cell.identifier == book.isbn13 {
-                    cell.thumbnailImageView.image = image
+                    cell.thumbnailImageView?.image = image
                 }
             }
         }
