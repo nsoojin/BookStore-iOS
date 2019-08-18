@@ -11,7 +11,6 @@ import BookStoreKit
 
 final class SearchViewController: UIViewController {
     private(set) var books = [Book]()
-    lazy var bookStore: BookStoreService = unspecified()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -71,6 +70,7 @@ final class SearchViewController: UIViewController {
         return bookStore.searchEngine
     }
     
+    private lazy var bookStore: BookStoreService = unspecified()
     @IBOutlet private weak var searchBar: UISearchBar?
     @IBOutlet private weak var tableView: UITableView?
     @IBOutlet private weak var errorMessageView: UIView?

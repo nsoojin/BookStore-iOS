@@ -95,7 +95,7 @@ final class BookInfoViewController: UIViewController {
         }
     }
     
-    private(set) lazy var bookStore: BookStoreService = unspecified()
+    private lazy var bookStore: BookStoreService = unspecified()
     @IBOutlet private weak var contentStackView: UIStackView?
     @IBOutlet private weak var activityIndicator: UIActivityIndicatorView?
     @IBOutlet private weak var titleLabel: UILabel?

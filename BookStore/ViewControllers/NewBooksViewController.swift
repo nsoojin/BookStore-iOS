@@ -48,7 +48,7 @@ final class NewBooksViewController: UIViewController {
         reload()
     }
     
-    lazy var bookStore: BookStoreService = unspecified()
+    private lazy var bookStore: BookStoreService = unspecified()
     @IBOutlet private weak var tableView: UITableView?
     @IBOutlet private weak var activityIndicatorView: UIActivityIndicatorView?
     @IBOutlet private weak var statusLabel: UILabel?
