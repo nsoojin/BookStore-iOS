@@ -1,5 +1,5 @@
 //
-//  UIKit + Extensions.swift
+//  UIKit+Extensions.swift
 //  BookStore
 //
 //  Created by Soojin Ro on 14/06/2019.

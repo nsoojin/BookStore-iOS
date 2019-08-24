@@ -1,5 +1,5 @@
 //
-//  Result + Extensions.swift
+//  Result+Extensions.swift
 //  BookStore
 //
 //  Created by Soojin Ro on 13/06/2019.
