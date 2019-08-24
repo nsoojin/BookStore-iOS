@@ -11,14 +11,20 @@ import Foundation
 /// A structure that contains information about new releases books.
 public struct NewBooksResponse: Decodable {
     
+    /// The collection of new books.
+    public let books: [Book]
+    
+    /// The total count of books for this response.
+    public let total: String
+    
     /// The error code of the request.
     ///
     /// - note: Error code "0" means no error.
     public let error: String
     
-    /// The total count of books for this response.
-    public let total: String
-    
-    /// The collection of new books.
-    public let books: [Book]
+    internal init(books: [Book], error: String) {
+        self.books = books
+        self.total = "\(books.count)"
+        self.error = error
+    }
 }

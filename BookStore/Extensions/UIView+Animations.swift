@@ -1,5 +1,5 @@
 //
-//  UIView + Animations.swift
+//  UIView+Animations.swift
 //  BookStore
 //
 //  Created by Soojin Ro on 12/06/2019.
@@ -37,7 +37,7 @@ extension UIView {
 
     static func animateFadeIn(_ views: [UIView?], completion: (() -> Void)? = nil) {
         UIView.animate(withDuration: durationFadeAnimation, animations: {
-            views.forEach { $0?.alpha = 0 }
+            views.forEach { $0?.alpha = 1 }
         }, completion: { _ in
             completion?()
         })

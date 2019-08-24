@@ -34,6 +34,15 @@ public struct Book: Decodable {
         case thumbnailURL = "image"
         case purchaseURL = "url"
     }
+    
+    internal init(title: String) {
+        self.title = title
+        subtitle = ""
+        price = ""
+        isbn13 = ""
+        thumbnailURL = nil
+        purchaseURL = nil
+    }
 }
 
 extension Book: CustomStringConvertible {

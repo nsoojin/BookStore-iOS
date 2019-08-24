@@ -51,6 +51,27 @@
                ReferencedContainer = "container:BookStore.xcodeproj">
             </BuildableReference>
          </TestableReference>
+         <TestableReference
+            skipped = "NO"
+            testExecutionOrdering = "random">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "F5DEF2D12310F27B00BFBFDA"
+               BuildableName = "BookStoreTests.xctest"
+               BlueprintName = "BookStoreTests"
+               ReferencedContainer = "container:BookStore.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "F5DEF2EA23110C6D00BFBFDA"
+               BuildableName = "BookStoreUITests.xctest"
+               BlueprintName = "BookStoreUITests"
+               ReferencedContainer = "container:BookStore.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
       </Testables>
       <MacroExpansion>
          <BuildableReference
