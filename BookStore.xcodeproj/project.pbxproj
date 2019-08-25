@@ -57,6 +57,10 @@
 		F57D5CF423123FB600022995 /* Swifter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F57D5CF323123FB600022995 /* Swifter.framework */; };
 		F57D5CF62312422900022995 /* BookStoreConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = F57D5CF52312422900022995 /* BookStoreConfiguration.swift */; };
 		F57D5CF823124DE700022995 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = F57D5CF723124DE700022995 /* Utils.swift */; };
+		F57D5CFA231259D100022995 /* NewBooksEmpty.json in Resources */ = {isa = PBXBuildFile; fileRef = F57D5CF9231259D100022995 /* NewBooksEmpty.json */; };
+		F57D5CFD23126F5B00022995 /* BookInfoViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F57D5CFC23126F5B00022995 /* BookInfoViewControllerTests.swift */; };
+		F57D5CFF23126FB200022995 /* BookInfoNormal.json in Resources */ = {isa = PBXBuildFile; fileRef = F57D5CFE23126FB200022995 /* BookInfoNormal.json */; };
+		F57D5D052312872F00022995 /* SearchViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F57D5D042312872F00022995 /* SearchViewControllerTests.swift */; };
 		F580CDD123115EDD00606911 /* NewBooksNormal.json in Resources */ = {isa = PBXBuildFile; fileRef = F580CDD023115EDD00606911 /* NewBooksNormal.json */; };
 		F5BBB9662311404D007C71EC /* NewBooksViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5BBB9652311404D007C71EC /* NewBooksViewControllerTests.swift */; };
 		F5BBE5AE22B02151003F88AC /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5BBE5AD22B02151003F88AC /* SearchViewController.swift */; };
@@ -172,6 +176,10 @@
 		F57D5CF323123FB600022995 /* Swifter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Swifter.framework; path = Carthage/Build/iOS/Swifter.framework; sourceTree = "<group>"; };
 		F57D5CF52312422900022995 /* BookStoreConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookStoreConfiguration.swift; sourceTree = "<group>"; };
 		F57D5CF723124DE700022995 /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
+		F57D5CF9231259D100022995 /* NewBooksEmpty.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = NewBooksEmpty.json; sourceTree = "<group>"; };
+		F57D5CFC23126F5B00022995 /* BookInfoViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookInfoViewControllerTests.swift; sourceTree = "<group>"; };
+		F57D5CFE23126FB200022995 /* BookInfoNormal.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = BookInfoNormal.json; sourceTree = "<group>"; };
+		F57D5D042312872F00022995 /* SearchViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewControllerTests.swift; sourceTree = "<group>"; };
 		F580CDD023115EDD00606911 /* NewBooksNormal.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = NewBooksNormal.json; sourceTree = "<group>"; };
 		F5A0E09422B46F9B001F1ABA /* NewBooksResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewBooksResponse.swift; sourceTree = "<group>"; };
 		F5BBB9632311404D007C71EC /* BookStoreUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BookStoreUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -389,11 +397,30 @@
 			path = BookStoreKitTests;
 			sourceTree = "<group>";
 		};
+		F57D5CFB23126F4200022995 /* BookInfoViewController */ = {
+			isa = PBXGroup;
+			children = (
+				F57D5CFC23126F5B00022995 /* BookInfoViewControllerTests.swift */,
+				F57D5CFE23126FB200022995 /* BookInfoNormal.json */,
+			);
+			path = BookInfoViewController;
+			sourceTree = "<group>";
+		};
+		F57D5D032312872200022995 /* SearchViewController */ = {
+			isa = PBXGroup;
+			children = (
+				F57D5D042312872F00022995 /* SearchViewControllerTests.swift */,
+			);
+			path = SearchViewController;
+			sourceTree = "<group>";
+		};
 		F5BBB9642311404D007C71EC /* BookStoreUITests */ = {
 			isa = PBXGroup;
 			children = (
 				F57D5CF723124DE700022995 /* Utils.swift */,
 				F5BBB96F231140FB007C71EC /* NewBooksViewController */,
+				F57D5CFB23126F4200022995 /* BookInfoViewController */,
+				F57D5D032312872200022995 /* SearchViewController */,
 				F5BBB9672311404D007C71EC /* Info.plist */,
 			);
 			path = BookStoreUITests;
@@ -404,6 +431,7 @@
 			children = (
 				F5BBB9652311404D007C71EC /* NewBooksViewControllerTests.swift */,
 				F580CDD023115EDD00606911 /* NewBooksNormal.json */,
+				F57D5CF9231259D100022995 /* NewBooksEmpty.json */,
 			);
 			path = NewBooksViewController;
 			sourceTree = "<group>";
@@ -718,6 +746,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				F580CDD123115EDD00606911 /* NewBooksNormal.json in Resources */,
+				F57D5CFF23126FB200022995 /* BookInfoNormal.json in Resources */,
+				F57D5CFA231259D100022995 /* NewBooksEmpty.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -821,6 +851,8 @@
 			files = (
 				F5BBB9662311404D007C71EC /* NewBooksViewControllerTests.swift in Sources */,
 				F57D5CF823124DE700022995 /* Utils.swift in Sources */,
+				F57D5D052312872F00022995 /* SearchViewControllerTests.swift in Sources */,
+				F57D5CFD23126F5B00022995 /* BookInfoViewControllerTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

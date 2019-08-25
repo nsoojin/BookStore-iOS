@@ -108,6 +108,7 @@
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="48Y-5n-4ao">
                                 <rect key="frame" x="0.0" y="50" width="58" height="58"/>
+                                <accessibility key="accessibilityConfiguration" identifier="Close"/>
                                 <inset key="contentEdgeInsets" minX="14" minY="14" maxX="14" maxY="14"/>
                                 <state key="normal" image="ic_close"/>
                                 <connections>
