@@ -21,10 +21,4 @@ public struct NewBooksResponse: Decodable {
     ///
     /// - note: Error code "0" means no error.
     public let error: String
-    
-    internal init(books: [Book], error: String) {
-        self.books = books
-        self.total = "\(books.count)"
-        self.error = error
-    }
 }
