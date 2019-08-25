@@ -14,7 +14,7 @@ struct NewBooksAPI: API {
     let configuration: APIConfiguration
     
     init() {
-        configuration = APIConfiguration(base: APIConfiguration.bookstoreBaseURL,
+        configuration = APIConfiguration(base: BookStoreConfiguration.shared.baseURL,
                                          path: "/1.0/new")
     }
 }

@@ -14,7 +14,7 @@ struct SearchBookAPI: API {
     let configuration: APIConfiguration
     
     init(searchText: String, page: Int) {
-        configuration = APIConfiguration(base: APIConfiguration.bookstoreBaseURL,
+        configuration = APIConfiguration(base: BookStoreConfiguration.shared.baseURL,
                                          path: "/1.0/search/\(searchText)/\(page)")
     }
 }

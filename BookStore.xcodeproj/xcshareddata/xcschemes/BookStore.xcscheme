@@ -34,9 +34,9 @@
             testExecutionOrdering = "random">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "F55CD25D22B3E8D8005D8C6C"
-               BuildableName = "NetworkingTests.xctest"
-               BlueprintName = "NetworkingTests"
+               BlueprintIdentifier = "F5BBB9622311404D007C71EC"
+               BuildableName = "BookStoreUITests.xctest"
+               BlueprintName = "BookStoreUITests"
                ReferencedContainer = "container:BookStore.xcodeproj">
             </BuildableReference>
          </TestableReference>
@@ -59,16 +59,6 @@
                BlueprintIdentifier = "F5DEF2D12310F27B00BFBFDA"
                BuildableName = "BookStoreTests.xctest"
                BlueprintName = "BookStoreTests"
-               ReferencedContainer = "container:BookStore.xcodeproj">
-            </BuildableReference>
-         </TestableReference>
-         <TestableReference
-            skipped = "NO">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "F5DEF2EA23110C6D00BFBFDA"
-               BuildableName = "BookStoreUITests.xctest"
-               BlueprintName = "BookStoreUITests"
                ReferencedContainer = "container:BookStore.xcodeproj">
             </BuildableReference>
          </TestableReference>
