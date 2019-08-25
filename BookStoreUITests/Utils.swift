@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import XCTest
 
 enum TestUtilError: Error {
     case fileNotFound
