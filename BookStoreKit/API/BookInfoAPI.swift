@@ -14,7 +14,7 @@ struct BookInfoAPI: API {
     let configuration: APIConfiguration
     
     init(isbn13: String) {
-        configuration = APIConfiguration(base: APIConfiguration.bookstoreBaseURL,
+        configuration = APIConfiguration(base: BookStoreConfiguration.shared.baseURL,
                                          path: "/1.0/books/\(isbn13)")
     }
 }
