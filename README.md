@@ -28,17 +28,19 @@ Run!
 
 # Contents
 
-- [App Features](https://github.com/nsoojin/BookStore#app-features)
+- [App Features](https://github.com/nsoojin/BookStore-iOS#app-features)
 
-- [`Result` type in Swift 5](https://github.com/nsoojin/BookStore#result-type-in-swift-5)
+- [`Result` type in Swift 5](https://github.com/nsoojin/BookStore-iOS#result-type-in-swift-5)
 
-- [Stubbing Network Requests for Unit Tests](https://github.com/nsoojin/BookStore#stubbing-network-requests-for-unit-tests)
+- [Stubbing Network Requests for Unit Tests](https://github.com/nsoojin/BookStore-iOS#stubbing-network-requests-for-unit-tests)
 
-- [Using Frameworks for independent functionalities](https://github.com/nsoojin/BookStore#using-frameworks-for-independent-functionalities)
+- [UI Testing with Stubbed Network Data](https://github.com/nsoojin/BookStore-iOS#ui-testing-with-stubbed-network-data)
 
-- [Writing a documentation comment](https://github.com/nsoojin/BookStore#writing-a-documentation-comment)
+- [Using Frameworks for independent functionalities](https://github.com/nsoojin/BookStore-iOS#using-frameworks-for-independent-functionalities)
 
-- [Getting Rid of IUOs](https://github.com/nsoojin/BookStore#getting-rid-of-iuos)
+- [Writing a documentation comment](https://github.com/nsoojin/BookStore-iOS#writing-a-documentation-comment)
+
+- [Getting Rid of IUOs](https://github.com/nsoojin/BookStore-iOS#getting-rid-of-iuos)
 
 ## App Features
 
@@ -114,6 +116,27 @@ session.dataTask(with: urlRequest) { (data, response, error) in
   //Stubbed response
 }.resume()
 ```
+
+## UI Testing with Stubbed Network Data
+
+The above method(as well as the famous [OHHTTPStubs](https://github.com/AliSoftware/OHHTTPStubs)) doesn't work for UI testing because the test bundle and the app bundle (XCUIApplication) are loaded in separate processes. By using [Swifter](https://github.com/httpswift/swifter), you can run a local http server on the simulator. 
+
+First, change the API endpoints during UI testing with launchArguments in your hosting app.
+
+```swift
+//In XCTestCase,
+override func setUp() {
+  app = XCUIApplication()
+  app.launchArguments = ["-uitesting"]
+}
+
+//In AppDelegate's application(_:didFinishLaunchingWithOptions:)
+if ProcessInfo.processInfo.arguments.contains("-uitesting") {
+  BookStoreConfiguration.shared.setBaseURL(URL(string: "http://localhost:8080")!)
+}
+```
+
+Then stub the network and test the UI with it.
 
 ## Using Frameworks for independent functionalities
 
