@@ -17,6 +17,7 @@ struct ITBookStoreService: BookStoreService {
     func fetchNewReleases(completionHandler: @escaping (Result<NewBooksResponse, Error>) -> Void) {
         BookStore.fetchNewReleases(completionHandler: completionHandler)
     }
+    
     func fetchInfo(with isbn13: String, completionHandler: @escaping (Result<BookInfo, Error>) -> Void) {
         BookStore.fetchInfo(with: isbn13, completionHandler: completionHandler)
     }
