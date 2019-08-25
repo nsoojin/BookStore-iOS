@@ -1,10 +1,11 @@
 coverage:
+  range: 50..85
+  round: down
   status:
-    # allow test coverage to drop by 1%, assume that it's typically due to CI problems
     patch:
       default:
         enabled: no
         if_not_found: success
     project:
       default:
-        threshold: 1
+        threshold: 3
