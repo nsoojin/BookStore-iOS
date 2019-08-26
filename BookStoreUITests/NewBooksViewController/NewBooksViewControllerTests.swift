@@ -7,7 +7,6 @@
 //
 
 import XCTest
-@testable import BookStore
 import Swifter
 
 private let newBooksPath = "/1.0/new"

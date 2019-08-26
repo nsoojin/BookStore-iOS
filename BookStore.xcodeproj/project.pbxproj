@@ -62,6 +62,9 @@
 		F57D5CFF23126FB200022995 /* BookInfoNormal.json in Resources */ = {isa = PBXBuildFile; fileRef = F57D5CFE23126FB200022995 /* BookInfoNormal.json */; };
 		F57D5D052312872F00022995 /* SearchViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F57D5D042312872F00022995 /* SearchViewControllerTests.swift */; };
 		F580CDD123115EDD00606911 /* NewBooksNormal.json in Resources */ = {isa = PBXBuildFile; fileRef = F580CDD023115EDD00606911 /* NewBooksNormal.json */; };
+		F581BA982313F86E001AE4B3 /* django123.json in Resources */ = {isa = PBXBuildFile; fileRef = F581BA972313F86E001AE4B3 /* django123.json */; };
+		F581BA9A2313F883001AE4B3 /* django.json in Resources */ = {isa = PBXBuildFile; fileRef = F581BA992313F883001AE4B3 /* django.json */; };
+		F581BA9C231402DB001AE4B3 /* bookInfo.json in Resources */ = {isa = PBXBuildFile; fileRef = F581BA9B231402DB001AE4B3 /* bookInfo.json */; };
 		F5BBB9662311404D007C71EC /* NewBooksViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5BBB9652311404D007C71EC /* NewBooksViewControllerTests.swift */; };
 		F5BBE5AE22B02151003F88AC /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5BBE5AD22B02151003F88AC /* SearchViewController.swift */; };
 		F5BBE5B022B03043003F88AC /* UIView+Animations.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5BBE5AF22B03043003F88AC /* UIView+Animations.swift */; };
@@ -181,6 +184,9 @@
 		F57D5CFE23126FB200022995 /* BookInfoNormal.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = BookInfoNormal.json; sourceTree = "<group>"; };
 		F57D5D042312872F00022995 /* SearchViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewControllerTests.swift; sourceTree = "<group>"; };
 		F580CDD023115EDD00606911 /* NewBooksNormal.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = NewBooksNormal.json; sourceTree = "<group>"; };
+		F581BA972313F86E001AE4B3 /* django123.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = django123.json; sourceTree = "<group>"; };
+		F581BA992313F883001AE4B3 /* django.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = django.json; sourceTree = "<group>"; };
+		F581BA9B231402DB001AE4B3 /* bookInfo.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = bookInfo.json; sourceTree = "<group>"; };
 		F5A0E09422B46F9B001F1ABA /* NewBooksResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewBooksResponse.swift; sourceTree = "<group>"; };
 		F5BBB9632311404D007C71EC /* BookStoreUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BookStoreUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F5BBB9652311404D007C71EC /* NewBooksViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewBooksViewControllerTests.swift; sourceTree = "<group>"; };
@@ -410,6 +416,9 @@
 			isa = PBXGroup;
 			children = (
 				F57D5D042312872F00022995 /* SearchViewControllerTests.swift */,
+				F581BA972313F86E001AE4B3 /* django123.json */,
+				F581BA992313F883001AE4B3 /* django.json */,
+				F581BA9B231402DB001AE4B3 /* bookInfo.json */,
 			);
 			path = SearchViewController;
 			sourceTree = "<group>";
@@ -747,7 +756,10 @@
 			files = (
 				F580CDD123115EDD00606911 /* NewBooksNormal.json in Resources */,
 				F57D5CFF23126FB200022995 /* BookInfoNormal.json in Resources */,
+				F581BA9C231402DB001AE4B3 /* bookInfo.json in Resources */,
 				F57D5CFA231259D100022995 /* NewBooksEmpty.json in Resources */,
+				F581BA9A2313F883001AE4B3 /* django.json in Resources */,
+				F581BA982313F86E001AE4B3 /* django123.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
