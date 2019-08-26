@@ -1,0 +1,17 @@
+{
+    "error": "0",
+    "title": "Learning Django Web Development",
+    "subtitle": "From idea to prototype, a learner's guide for web development with the Django application framework",
+    "authors": "Sanjeev Jaiswal, Ratan Kumar",
+    "publisher": "Packt Publishing",
+    "language": "English",
+    "isbn10": "1783984406",
+    "isbn13": "9781783984404",
+    "pages": "336",
+    "year": "2015",
+    "rating": "0",
+    "desc": "Django, written in Python, is a web application framework designed to build complex web applications quickly without any hassle. It loosely follows the MVC pattern and adheres to the Don't Repeat Yourself principle, which makes a database-driven application efficient and highly scalable, and is by f...",
+    "price": "$35.99",
+    "image": "https://itbook.store/img/books/9781783984404.png",
+    "url": "https://itbook.store/books/9781783984404"
+}

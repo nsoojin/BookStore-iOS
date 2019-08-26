@@ -36,6 +36,7 @@ final class SearchViewController: UIViewController {
         tableView?.rowHeight = 250
         tableView?.estimatedRowHeight = 250
         tableView?.tableFooterView = UIView()
+        tableView?.accessibilityIdentifier = "SearchTableView"
     }
     
     private func handleSuccess(_ result: SearchResult) {

@@ -1,0 +1,87 @@
+{
+    "error": "0",
+    "total": "24",
+    "page": "1",
+    "books": [
+        {
+            "title": "Learning Django Web Development",
+            "subtitle": "From idea to prototype, a learner's guide for web development with the Django application framework",
+            "isbn13": "9781783984404",
+            "price": "$35.99",
+            "image": "https://itbook.store/img/books/9781783984404.png",
+            "url": "https://itbook.store/books/9781783984404"
+        },
+        {
+            "title": "Django Design Patterns and Best Practices",
+            "subtitle": "Easily build maintainable websites with powerful and relevant Django design patterns",
+            "isbn13": "9781783986644",
+            "price": "$35.99",
+            "image": "https://itbook.store/img/books/9781783986644.png",
+            "url": "https://itbook.store/books/9781783986644"
+        },
+        {
+            "title": "Django By Example",
+            "subtitle": "Create your own line of successful web applications with Django",
+            "isbn13": "9781784391911",
+            "price": "$35.25",
+            "image": "https://itbook.store/img/books/9781784391911.png",
+            "url": "https://itbook.store/books/9781784391911"
+        },
+        {
+            "title": "Web Development with Django Cookbook, 2nd Edition",
+            "subtitle": "Over 90 practical recipes to help you create scalable websites using the Django 1.8 framework",
+            "isbn13": "9781785886775",
+            "price": "$39.99",
+            "image": "https://itbook.store/img/books/9781785886775.png",
+            "url": "https://itbook.store/books/9781785886775"
+        },
+        {
+            "title": "Building Django 2.0 Web Applications",
+            "subtitle": "Create enterprise-grade, scalable Python web applications easily with Django 2.0",
+            "isbn13": "9781787286214",
+            "price": "$44.99",
+            "image": "https://itbook.store/img/books/9781787286214.png",
+            "url": "https://itbook.store/books/9781787286214"
+        },
+        {
+            "title": "Django 2 Web Development Cookbook, 3rd Edition",
+            "subtitle": "100 practical recipes on building scalable Python web apps with Django 2",
+            "isbn13": "9781788837682",
+            "price": "$44.99",
+            "image": "https://itbook.store/img/books/9781788837682.png",
+            "url": "https://itbook.store/books/9781788837682"
+        },
+        {
+            "title": "Django 1.0 Template Development",
+            "subtitle": "A practical guide to Django template development with custom tags, filters, multiple templates, caching, and more",
+            "isbn13": "9781847195708",
+            "price": "$23.99",
+            "image": "https://itbook.store/img/books/9781847195708.png",
+            "url": "https://itbook.store/books/9781847195708"
+        },
+        {
+            "title": "Python Web Development with Django",
+            "subtitle": "",
+            "isbn13": "9780132356138",
+            "price": "$20.00",
+            "image": "https://itbook.store/img/books/9780132356138.png",
+            "url": "https://itbook.store/books/9780132356138"
+        },
+        {
+            "title": "Beginning Django E-Commerce",
+            "subtitle": "",
+            "isbn13": "9781430225355",
+            "price": "$39.99",
+            "image": "https://itbook.store/img/books/9781430225355.png",
+            "url": "https://itbook.store/books/9781430225355"
+        },
+        {
+            "title": "Pro Django, 2nd Edition",
+            "subtitle": "",
+            "isbn13": "9781430258094",
+            "price": "$45.59",
+            "image": "https://itbook.store/img/books/9781430258094.png",
+            "url": "https://itbook.store/books/9781430258094"
+        }
+    ]
+}
