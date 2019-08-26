@@ -138,6 +138,28 @@ if ProcessInfo.processInfo.arguments.contains("-uitesting") {
 
 Then stub the network and test the UI with it.
 
+```swift
+let server = HttpServer()
+
+func testNewBooksNormal() {
+  do {
+    let path = try TestUtil.path(for: normalResponseJSONFilename, in: type(of: self))
+    server[newBooksPath] = shareFile(path)
+    try server.start()
+    app.launch()
+  } catch {
+    XCTAssert(false, "Swifter Server failed to start.")
+  }
+        
+  XCTContext.runActivity(named: "Test Successful TableView Screen") { _ in
+    XCTAssert(app.tables[tableViewIdentifier].waitForExistence(timeout: 3))
+    XCTAssert(app.tables[tableViewIdentifier].cells.count > 0)
+    XCTAssert(app.staticTexts["9781788476249"].exists)
+    XCTAssert(app.staticTexts["$44.99"].exists)
+  }
+}
+```
+
 ## Using Frameworks for independent functionalities
 
 Separating your app's functions into targets has several advantages. It forces you to care about dependencies, and it is good for unit tests since features are sandboxed. However, it may slow down the app launch (by little) due to framework loading.
