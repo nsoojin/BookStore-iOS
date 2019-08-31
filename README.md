@@ -26,6 +26,8 @@ This is a sample app to practice using `Result` type, stubbing network request f
 
 Run!
 
+👉 [한글 버전](https://soojin.ro/blog/bookstore-ios-readme)
+
 # Contents
 
 - [App Features](https://github.com/nsoojin/BookStore-iOS#app-features)
