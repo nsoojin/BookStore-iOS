@@ -13,6 +13,8 @@
         <img src="https://img.shields.io/twitter/follow/soojinro?style=social"></a>
 </p>
 
+### 👉 [한글 버전](https://soojin.ro/blog/bookstore-ios-readme)
+
 See new releases and search for programming books from [IT Bookstore API](https://api.itbook.store)
 
 This is a sample app to practice using `Result` type, stubbing network request for unit tests, separating functionalities into frameworks, and writing Swift documentation.
@@ -41,8 +43,6 @@ Run!
 - [Writing a documentation comment](https://github.com/nsoojin/BookStore-iOS#writing-a-documentation-comment)
 
 - [Getting Rid of IUOs](https://github.com/nsoojin/BookStore-iOS#getting-rid-of-iuos)
-
-### 👉 [한글 버전](https://soojin.ro/blog/bookstore-ios-readme)
 
 ## App Features
 
