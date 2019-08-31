@@ -42,7 +42,7 @@ Run!
 
 - [Getting Rid of IUOs](https://github.com/nsoojin/BookStore-iOS#getting-rid-of-iuos)
 
-## 👉 [한글 버전](https://soojin.ro/blog/bookstore-ios-readme)
+### 👉 [한글 버전](https://soojin.ro/blog/bookstore-ios-readme)
 
 ## App Features
 
