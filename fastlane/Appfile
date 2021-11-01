@@ -1,0 +1,11 @@
+app_identifier "edu.example.ruby.BookStore" # The bundle identifier of your app
+apple_id "spydercapriani@gmail.com"  # Your Apple email address
+team_name "Daniel Gilbert"
+team_id "22S6G5S8V4"
+
+# To select a team for App Store Connect use
+# itc_team_name "Company"
+# itc_team_id "18742801"
+
+# For more information about the Appfile, see:
+#     https://docs.fastlane.tools/advanced/#appfile
