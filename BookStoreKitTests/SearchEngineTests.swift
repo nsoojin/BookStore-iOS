@@ -132,7 +132,6 @@ class SearchEngineTests: XCTestCase {
                 if case let .apiFailure(error as NSError) = apiError {
                     XCTAssertEqual(error.domain, "SearchError")
                     XCTAssertEqual(error.code, 1111)
-                    XCTAssertTrue(error.userInfo.isEmpty)
                 } else {
                     XCTFail("Search Result should be API Failure")
                 }
