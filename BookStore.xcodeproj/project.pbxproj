@@ -80,6 +80,7 @@
 /* Begin PBXFileReference section */
 		A23B1EA42730473000213109 /* Networking */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Networking; sourceTree = "<group>"; };
 		A246769627304BC600590E71 /* BookStoreKit */ = {isa = PBXFileReference; lastKnownFileType = folder; path = BookStoreKit; sourceTree = "<group>"; };
+		A246769A2730514500590E71 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		F531D83C22AE62B300156E2E /* NewBooksViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewBooksViewController.swift; sourceTree = "<group>"; };
 		F531D84322AE6A4100156E2E /* BookCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookCell.swift; sourceTree = "<group>"; };
 		F531D84422AE6A4100156E2E /* BookCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BookCell.xib; sourceTree = "<group>"; };
@@ -237,6 +238,7 @@
 		F5C13D3122AE4D5E00F02A36 = {
 			isa = PBXGroup;
 			children = (
+				A246769A2730514500590E71 /* README.md */,
 				A23B1EA32730473000213109 /* Packages */,
 				F5C13D3C22AE4D5E00F02A36 /* BookStore */,
 				F5DEF2D32310F27B00BFBFDA /* BookStoreTests */,
