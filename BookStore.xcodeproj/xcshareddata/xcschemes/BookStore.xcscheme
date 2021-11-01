@@ -20,6 +20,20 @@
                ReferencedContainer = "container:BookStore.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "NO"
+            buildForProfiling = "NO"
+            buildForArchiving = "NO"
+            buildForAnalyzing = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "BookStoreKitTests"
+               BuildableName = "BookStoreKitTests"
+               BlueprintName = "BookStoreKitTests"
+               ReferencedContainer = "container:BookStoreKit">
+            </BuildableReference>
+         </BuildActionEntry>
       </BuildActionEntries>
    </BuildAction>
    <TestAction
@@ -54,21 +68,20 @@
             testExecutionOrdering = "random">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "F56ACD4022BD24C200317A84"
-               BuildableName = "BookStoreKitTests.xctest"
-               BlueprintName = "BookStoreKitTests"
-               ReferencedContainer = "container:BookStore.xcodeproj">
-            </BuildableReference>
-         </TestableReference>
-         <TestableReference
-            skipped = "NO"
-            testExecutionOrdering = "random">
-            <BuildableReference
-               BuildableIdentifier = "primary"
                BlueprintIdentifier = "F5DEF2D12310F27B00BFBFDA"
                BuildableName = "BookStoreTests.xctest"
                BlueprintName = "BookStoreTests"
                ReferencedContainer = "container:BookStore.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "BookStoreKitTests"
+               BuildableName = "BookStoreKitTests"
+               BlueprintName = "BookStoreKitTests"
+               ReferencedContainer = "container:BookStoreKit">
             </BuildableReference>
          </TestableReference>
       </Testables>
