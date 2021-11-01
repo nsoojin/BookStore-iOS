@@ -3,10 +3,11 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A23B1EA127303EE000213109 /* Swifter in Frameworks */ = {isa = PBXBuildFile; productRef = A23B1EA027303EE000213109 /* Swifter */; };
 		F529C1A023084C7200529833 /* SearchErrorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F529C19F23084C7200529833 /* SearchErrorTests.swift */; };
 		F531D83D22AE62B300156E2E /* NewBooksViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F531D83C22AE62B300156E2E /* NewBooksViewController.swift */; };
 		F531D84522AE6A4100156E2E /* BookCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F531D84322AE6A4100156E2E /* BookCell.swift */; };
@@ -54,7 +55,6 @@
 		F56ACD6C22BD257300317A84 /* SearchEngineTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5C1A2CD22B61FAF00E9D6CD /* SearchEngineTests.swift */; };
 		F56ACD6D22BD257300317A84 /* APITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5C1A2C622B60E2800E9D6CD /* APITests.swift */; };
 		F56ACD6E22BD257300317A84 /* UtilsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5C1A2C222B5B87C00E9D6CD /* UtilsTests.swift */; };
-		F57D5CF423123FB600022995 /* Swifter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F57D5CF323123FB600022995 /* Swifter.framework */; };
 		F57D5CF62312422900022995 /* BookStoreConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = F57D5CF52312422900022995 /* BookStoreConfiguration.swift */; };
 		F57D5CF823124DE700022995 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = F57D5CF723124DE700022995 /* Utils.swift */; };
 		F57D5CFA231259D100022995 /* NewBooksEmpty.json in Resources */ = {isa = PBXBuildFile; fileRef = F57D5CF9231259D100022995 /* NewBooksEmpty.json */; };
@@ -176,7 +176,6 @@
 		F56ACD3C22BD24C200317A84 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F56ACD4122BD24C200317A84 /* BookStoreKitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BookStoreKitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F56ACD4A22BD24C200317A84 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		F57D5CF323123FB600022995 /* Swifter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Swifter.framework; path = Carthage/Build/iOS/Swifter.framework; sourceTree = "<group>"; };
 		F57D5CF52312422900022995 /* BookStoreConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookStoreConfiguration.swift; sourceTree = "<group>"; };
 		F57D5CF723124DE700022995 /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
 		F57D5CF9231259D100022995 /* NewBooksEmpty.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = NewBooksEmpty.json; sourceTree = "<group>"; };
@@ -254,7 +253,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F57D5CF423123FB600022995 /* Swifter.framework in Frameworks */,
+				A23B1EA127303EE000213109 /* Swifter in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -320,14 +319,6 @@
 				F55CD25922B3E8D8005D8C6C /* Info.plist */,
 			);
 			path = Networking;
-			sourceTree = "<group>";
-		};
-		F55CD27722B3E9A2005D8C6C /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				F57D5CF323123FB600022995 /* Swifter.framework */,
-			);
-			name = Frameworks;
 			sourceTree = "<group>";
 		};
 		F55CD27A22B3EA5F005D8C6C /* Model */ = {
@@ -455,7 +446,6 @@
 				F56ACD4722BD24C200317A84 /* BookStoreKitTests */,
 				F55CD25722B3E8D8005D8C6C /* Networking */,
 				F5C13D3B22AE4D5E00F02A36 /* Products */,
-				F55CD27722B3E9A2005D8C6C /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -623,7 +613,6 @@
 				F5BBB95F2311404D007C71EC /* Sources */,
 				F5BBB9602311404D007C71EC /* Frameworks */,
 				F5BBB9612311404D007C71EC /* Resources */,
-				F580CD9323114C1900606911 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -631,6 +620,9 @@
 				F5BBB9692311404D007C71EC /* PBXTargetDependency */,
 			);
 			name = BookStoreUITests;
+			packageProductDependencies = (
+				A23B1EA027303EE000213109 /* Swifter */,
+			);
 			productName = BookStoreUITests;
 			productReference = F5BBB9632311404D007C71EC /* BookStoreUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
@@ -669,6 +661,8 @@
 				F5DEF2D82310F27B00BFBFDA /* PBXTargetDependency */,
 			);
 			name = BookStoreTests;
+			packageProductDependencies = (
+			);
 			productName = BookStoreTests;
 			productReference = F5DEF2D22310F27B00BFBFDA /* BookStoreTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
@@ -680,7 +674,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 1020;
-				LastUpgradeCheck = 1020;
+				LastUpgradeCheck = 1310;
 				ORGANIZATIONNAME = "Soojin Ro";
 				TargetAttributes = {
 					F55CD25522B3E8D8005D8C6C = {
@@ -714,6 +708,9 @@
 				Base,
 			);
 			mainGroup = F5C13D3122AE4D5E00F02A36;
+			packageReferences = (
+				A23B1E9D27303E6D00213109 /* XCRemoteSwiftPackageReference "swifter" */,
+			);
 			productRefGroup = F5C13D3B22AE4D5E00F02A36 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -782,28 +779,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
-
-/* Begin PBXShellScriptBuildPhase section */
-		F580CD9323114C1900606911 /* ShellScript */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"$(SRCROOT)/Carthage/Build/iOS/Swifter.framework",
-			);
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/Swifter.framework",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "/usr/local/bin/carthage copy-frameworks\n";
-		};
-/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		F55CD25222B3E8D8005D8C6C /* Sources */ = {
@@ -1186,6 +1161,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -1247,6 +1223,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -1282,7 +1259,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 42S8NWXH6X;
+				DEVELOPMENT_TEAM = 22S6G5S8V4;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
@@ -1293,7 +1270,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.nsoojin.BookStore;
+				PRODUCT_BUNDLE_IDENTIFIER = edu.example.BookStore;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -1306,7 +1283,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 42S8NWXH6X;
+				DEVELOPMENT_TEAM = 22S6G5S8V4;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
@@ -1317,7 +1294,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.nsoojin.BookStore;
+				PRODUCT_BUNDLE_IDENTIFIER = edu.example.BookStore;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -1329,7 +1306,7 @@
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 42S8NWXH6X;
+				DEVELOPMENT_TEAM = 22S6G5S8V4;
 				INFOPLIST_FILE = BookStoreTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -1350,7 +1327,7 @@
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 42S8NWXH6X;
+				DEVELOPMENT_TEAM = 22S6G5S8V4;
 				INFOPLIST_FILE = BookStoreTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -1433,6 +1410,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		A23B1E9D27303E6D00213109 /* XCRemoteSwiftPackageReference "swifter" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "git@github.com:httpswift/swifter.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		A23B1EA027303EE000213109 /* Swifter */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A23B1E9D27303E6D00213109 /* XCRemoteSwiftPackageReference "swifter" */;
+			productName = Swifter;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = F5C13D3222AE4D5E00F02A36 /* Project object */;
 }
