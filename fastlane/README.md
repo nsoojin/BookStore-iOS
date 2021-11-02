@@ -31,6 +31,11 @@ Create App
 fastlane ios certs
 ```
 Manage Certificates / Profiles
+### ios release
+```
+fastlane ios release
+```
+Release
 
 ----
 

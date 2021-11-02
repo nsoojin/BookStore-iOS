@@ -41,6 +41,7 @@ playground.xcworkspace
 **/fastlane/screenshots/**/*.png
 **/fastlane/test_output
 **/fastlane/keys
+**/build
 .env.secret
 
 # MacOS

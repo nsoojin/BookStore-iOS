@@ -47,6 +47,14 @@ platform :ios do
   lane :certs do |options|
     match(type: "development")
   end
+
+  desc "Release"
+  lane :release do |options|
+    clean_build_artifacts
+    match
+    gym
+  end
+
   #hidden from lanes,list,docs
   desc "Show Environment"
   private_lane :showEnv do
