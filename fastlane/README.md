@@ -26,6 +26,11 @@ Run All Tests
 fastlane ios create_app
 ```
 Create App
+### ios certs
+```
+fastlane ios certs
+```
+Manage Certificates / Profiles
 
 ----
 

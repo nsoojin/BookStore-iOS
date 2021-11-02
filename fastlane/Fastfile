@@ -42,6 +42,11 @@ platform :ios do
       app_name: ENV['APP_NAME']
     )
   end
+  
+  desc "Manage Certificates / Profiles"
+  lane :certs do |options|
+    match(type: "development")
+  end
   #hidden from lanes,list,docs
   desc "Show Environment"
   private_lane :showEnv do
