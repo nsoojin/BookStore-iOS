@@ -13,13 +13,43 @@
 # Uncomment the line if you want fastlane to automatically update itself
 # update_fastlane
 
+fastlane_require "dotenv"
+Dotenv.load(".env.secret")
+
 default_platform(:ios)
 
 platform :ios do
 
+  before_all do |lane, options|
+    showEnv
+    app_store_connect_api_key(
+      key_id: ENV['ASC_KEY_ID'],
+      issuer_id: ENV['ASC_ISSUER_ID'],
+      key_filepath: ENV['ASC_KEY_PATH'],
+      duration: 1200,
+      in_house: false
+    )
+  end
+
   desc "Run All Tests"
   lane :tests do |options|
     run_tests()
+  end
+  
+  desc "Create App"
+  lane :create_app do |options|
+    produce(
+      app_name: ENV['APP_NAME']
+    )
+  end
+  #hidden from lanes,list,docs
+  desc "Show Environment"
+  private_lane :showEnv do
+    UI.header "CURRENT ENVIRONMENT"
+
+    UI.message "BUNDLE_ID: #{ENV['BUNDLE_IDENTIFIER']}"
+    UI.message "SCHEME: #{ENV['SCHEME']}"
+    UI.message "APP_NAME: #{ENV['APP_NAME']}"
   end
 
 end

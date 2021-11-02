@@ -40,6 +40,7 @@ playground.xcworkspace
 **/fastlane/Preview.html
 **/fastlane/screenshots/**/*.png
 **/fastlane/test_output
+.env.secret
 
 # MacOS
 *.DS_Store

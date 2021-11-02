@@ -1,4 +1,4 @@
-app_identifier "edu.example.ruby.BookStore" # The bundle identifier of your app
+app_identifier ENV['BUNDLE_IDENTIFIER'] # The bundle identifier of your app
 apple_id "spydercapriani@gmail.com"  # Your Apple email address
 team_name "Daniel Gilbert"
 team_id "22S6G5S8V4"
